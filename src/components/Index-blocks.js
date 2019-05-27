@@ -8,6 +8,36 @@ import intro_photo_back from "../assets/img/index/index_intro_back.png"
 
 import MailchimpForm from "./mailchimp-block"
 
+export const PressBlock = props => (
+  <section className="press_block half_background">
+    <div className="layout">
+      <h2>Press</h2>
+      <div className="press_wrapper">
+        {props.data.map((item, i) => (
+          <div className="press_item" key={i}>
+            <ScrollAnimation
+              animateIn="fadeIn"
+              animateOut="fadeOut"
+              delay={200}
+            >
+              <a href={item.node.data.media_link.url} target="blank">
+                <img src={item.node.data.cover_image.url} alt="img" />
+              </a>
+              <h5>{item.node.data.title.text}</h5>
+              <p>{item.node.data.texto.text}</p>
+              <p className="media">
+                <a href={item.node.data.media_link.url} target="blank">
+                  Find out more
+                </a>
+              </p>
+            </ScrollAnimation>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)
+
 export const IntroBlock = props => (
   <section className="intro_block">
     <img src={intro_photo_back} alt="" className="background_img" />
@@ -123,37 +153,6 @@ export const InActionBlock = props => (
     </div>
   </section>
 )
-
-export const PressBlock = props => (
-  <section className="press_block half_background">
-    <div className="layout">
-      <h2>Press</h2>
-      <div className="press_wrapper">
-        {props.data.map((item, i) => (
-          <div className="press_item" key={i}>
-            <ScrollAnimation
-              animateIn="fadeIn"
-              animateOut="fadeOut"
-              delay={200}
-            >
-              <a href={item.node.data.media_link.url} target="blank">
-                <img src={item.node.data.cover_image.url} alt="img" />
-              </a>
-              <h5>{item.node.data.title.text}</h5>
-              <p>{item.node.data.texto.text}</p>
-              <p className="media">
-                <a href={item.node.data.media_link.url} target="blank">
-                  Find out more
-                </a>
-              </p>
-            </ScrollAnimation>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)
-
 export const CTABlock = props => (
   <section className="cta_block">
     <div className="layout">
