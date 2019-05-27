@@ -313,3 +313,8 @@ section {
     }
   }
 }
+@media screen and (min-width: 361px) and (max-width:640px){
+.intro_block h3 {
+    margin-bottom: 130px !important;
+}
+}
