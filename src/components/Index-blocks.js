@@ -13,8 +13,8 @@ export const IntroBlock = props => (
     <img src={intro_photo_back} alt="" className="background_img" />
     <div className="info_wrapper layout">
       <div className="text_wrapper">
-        <h1>{props.title}</h1>
-        <h3>{props.sub}</h3>
+        <h3>{props.title}</h3>
+        <h1>{props.sub}</h1>
         <div className="p_wrapper">
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" delay={200}>
             <div
