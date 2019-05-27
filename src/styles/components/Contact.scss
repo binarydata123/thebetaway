@@ -1,0 +1,110 @@
+#contact_page {
+  .title_wrapper {
+    padding: 140px 0 48px 0;
+  }
+  .subtitle {
+    @extend %serfifTitle;
+    color: #bababa;
+    font-style: italic;
+    font-size: 1.6em;
+  }
+  .contact_wrapper {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: var(--backgrey);
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+
+      grid-template-areas:
+        "name"
+        "lastname"
+        "mail"
+        "phone"
+        "interest"
+        "commet"
+        "submit";
+
+      @media screen and (min-width: 650px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "name lastname"
+          "mail phone"
+          "interest ."
+          "commet commet"
+          "submit submit";
+      }
+      #name {
+        grid-area: name;
+        height: 40px;
+      }
+      #lastname {
+        grid-area: lastname;
+        height: 40px;
+      }
+      #mail {
+        grid-area: mail;
+        height: 40px;
+      }
+      #phone {
+        grid-area: phone;
+        height: 40px;
+      }
+      #interest {
+        grid-area: interest;
+        height: 40px;
+      }
+      #commet {
+        grid-area: commet;
+      }
+      #submit {
+        grid-area: submit;
+        background-color: var(--corpo-dark);
+        cursor: pointer;
+        color: var(--w);
+        text-transform: lowercase;
+        letter-spacing: 2px;
+      }
+
+      input,
+      textarea,
+      select {
+        border: none;
+        padding: 16px;
+        background-color: var(--w);
+
+        &::placeholder {
+          text-transform: uppercase;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  .info_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 650px) {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .adrees_wrapper {
+      padding: 40px;
+      .postal_direction {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: var(--corpo);
+        p {
+          margin-bottom: 16px;
+          font-size: 1.3em;
+        }
+        p,
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

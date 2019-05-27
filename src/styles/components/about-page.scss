@@ -1,0 +1,105 @@
+.trainer_info {
+  padding-top: 80px;
+  h2 {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  &.mai {
+    .top {
+      @media screen and (min-width: 650px) {
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+  }
+  &.john {
+    .top {
+      @media screen and (min-width: 650px) {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  }
+  .top {
+    display: grid;
+    margin-bottom: 40px;
+    grid-gap: 32px;
+
+    @media screen and (min-width: 650px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  .info_wrapper {
+    column-count: 1;
+    column-gap: 32px;
+
+    @media screen and (min-width: 650px) {
+      column-count: 2;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+  .list {
+    min-height: 350px;
+    li {
+      margin-bottom: 8px;
+      color: var(--text-color);
+      font-size: 1.1em;
+      line-height: 1.4em;
+      font-weight: bold;
+    }
+  }
+  .img {
+    position: relative;
+    .wrapper {
+      width: 100%;
+
+      img {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+    .mail_anchor {
+      font-size: 1.4em;
+      font-style: italic;
+      letter-spacing: 1px;
+      color: #a2a7a9;
+    }
+  }
+}
+
+.cta_block_img {
+  min-height: 500px;
+  margin-top: 80px;
+  position: relative;
+  background-image: url(../assets/img/marco_uno.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  p,
+  a {
+    color: var(--w);
+  }
+  .link_wrapper {
+    a {
+      border: 3px solid var(--w);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: black;
+  }
+
+  & * {
+    position: relative;
+    /* hack */
+  }
+}
