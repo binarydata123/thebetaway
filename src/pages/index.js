@@ -37,6 +37,7 @@ class Index extends React.Component {
       <div className="index">
         <Layout>
           <Header title={title_header.text} subtitle={sub_title_header.text} />
+          <PressBlock data={pressItem} />
           <IntroBlock
             title={intro_title.text}
             sub={intro_sub.text}
@@ -49,7 +50,6 @@ class Index extends React.Component {
           />
           <CreatorsBlock john={john} mai={mai} />
           <InActionBlock data={instaContent} />
-          <PressBlock data={pressItem} />
           <CTABlock text={cta_text.text} />
         </Layout>
       </div>
