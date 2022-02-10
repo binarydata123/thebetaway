@@ -27,7 +27,7 @@
     "gatsby-source-instagram-all": "^2.0.5",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-transformer-sharp": "^2.1.18",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.8.3",
     "react-animate-on-scroll": "^2.1.5",
